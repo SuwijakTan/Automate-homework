@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210908 23:53:17.318" rpa="false" schemaversion="2">
+<suite id="s1" name="Automate homework" source="C:\Users\Doppio3\Desktop\Automate\P'Wu automate practice\automate\Automate Homework\Automate homework.robot">
+<kw name="openweb" library="Variable" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${web}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210908 23:53:17.511" level="INFO">Opening browser 'chrome' to base url 'http://www.doppio-tech.com:8080/login'.</msg>
+<status status="PASS" starttime="20210908 23:53:17.511" endtime="20210908 23:53:18.755"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210908 23:53:18.755" endtime="20210908 23:53:18.874"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:17.510" endtime="20210908 23:53:18.876"/>
+</kw>
+<test id="s1-t1" name="Invalid Login">
+<kw name="Login">
+<arg> </arg>
+<arg>invalid</arg>
+<arg>Invalid username or password</arg>
+<arg>xpath=//div[@class='alert alert-danger']</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_box}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:18.877" level="INFO">Typing text ' ' into text field 'xpath=//input[@id='j_username']'.</msg>
+<status status="PASS" starttime="20210908 23:53:18.877" endtime="20210908 23:53:18.978"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_box}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:18.980" level="INFO">Typing text 'invalid' into text field 'xpath=//input[@name='j_password']'.</msg>
+<status status="PASS" starttime="20210908 23:53:18.979" endtime="20210908 23:53:19.039"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${sign_in}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.040" level="INFO">Clicking button 'xpath=//input[@name='Submit']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.040" endtime="20210908 23:53:19.145"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210908 23:53:19.145" endtime="20210908 23:53:19.159"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210908 23:53:19.159" level="INFO">Verifying element 'xpath=//div[@class='alert alert-danger']' contains exact text 'Invalid username or password'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.159" endtime="20210908 23:53:19.176"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:18.876" endtime="20210908 23:53:19.176"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:18.876" endtime="20210908 23:53:19.176"/>
+</test>
+<test id="s1-t2" name="Invalid Login">
+<kw name="Login">
+<arg>invalid</arg>
+<arg> </arg>
+<arg>Invalid username or password</arg>
+<arg>xpath=//div[@class='alert alert-danger']</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_box}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.179" level="INFO">Typing text 'invalid' into text field 'xpath=//input[@id='j_username']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.179" endtime="20210908 23:53:19.255"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_box}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.255" level="INFO">Typing text ' ' into text field 'xpath=//input[@name='j_password']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.255" endtime="20210908 23:53:19.315"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${sign_in}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.315" level="INFO">Clicking button 'xpath=//input[@name='Submit']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.315" endtime="20210908 23:53:19.404"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210908 23:53:19.404" endtime="20210908 23:53:19.409"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210908 23:53:19.409" level="INFO">Verifying element 'xpath=//div[@class='alert alert-danger']' contains exact text 'Invalid username or password'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.409" endtime="20210908 23:53:19.427"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:19.178" endtime="20210908 23:53:19.427"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:19.177" endtime="20210908 23:53:19.428"/>
+</test>
+<test id="s1-t3" name="Invalid Login">
+<kw name="Login">
+<arg>invalid</arg>
+<arg>invalid</arg>
+<arg>Invalid username or password</arg>
+<arg>xpath=//div[@class='alert alert-danger']</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_box}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.432" level="INFO">Typing text 'invalid' into text field 'xpath=//input[@id='j_username']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.431" endtime="20210908 23:53:19.515"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_box}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.516" level="INFO">Typing text 'invalid' into text field 'xpath=//input[@name='j_password']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.516" endtime="20210908 23:53:19.607"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${sign_in}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.610" level="INFO">Clicking button 'xpath=//input[@name='Submit']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.607" endtime="20210908 23:53:19.733"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210908 23:53:19.734" endtime="20210908 23:53:19.762"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210908 23:53:19.763" level="INFO">Verifying element 'xpath=//div[@class='alert alert-danger']' contains exact text 'Invalid username or password'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.762" endtime="20210908 23:53:19.797"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:19.431" endtime="20210908 23:53:19.797"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:19.430" endtime="20210908 23:53:19.798"/>
+</test>
+<test id="s1-t4" name="Valid Login">
+<kw name="Login">
+<arg>dummy</arg>
+<arg>dummy</arg>
+<arg>Access Denied</arg>
+<arg>xpath=//div[@id='main-panel']/h1</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_box}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.801" level="INFO">Typing text 'dummy' into text field 'xpath=//input[@id='j_username']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.800" endtime="20210908 23:53:19.870"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_box}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.873" level="INFO">Typing text 'dummy' into text field 'xpath=//input[@name='j_password']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.870" endtime="20210908 23:53:19.962"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${sign_in}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210908 23:53:19.963" level="INFO">Clicking button 'xpath=//input[@name='Submit']'.</msg>
+<status status="PASS" starttime="20210908 23:53:19.962" endtime="20210908 23:53:20.364"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210908 23:53:20.364" endtime="20210908 23:53:20.376"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${message}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210908 23:53:20.376" level="INFO">Verifying element 'xpath=//div[@id='main-panel']/h1' contains exact text 'Access Denied'.</msg>
+<status status="PASS" starttime="20210908 23:53:20.376" endtime="20210908 23:53:20.390"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:19.800" endtime="20210908 23:53:20.390"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:19.799" endtime="20210908 23:53:20.390"/>
+</test>
+<kw name="closeweb" library="Variable" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210908 23:53:20.393" endtime="20210908 23:53:22.589"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:20.392" endtime="20210908 23:53:22.589"/>
+</kw>
+<status status="PASS" starttime="20210908 23:53:17.319" endtime="20210908 23:53:22.589"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Automate homework">Automate homework</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210908 23:53:19.177" level="WARN">Multiple test cases with name 'Invalid Login' executed in test suite 'Automate homework'.</msg>
+<msg timestamp="20210908 23:53:19.429" level="WARN">Multiple test cases with name 'Invalid Login' executed in test suite 'Automate homework'.</msg>
+</errors>
+</robot>

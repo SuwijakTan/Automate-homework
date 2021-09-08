@@ -1,0 +1,5 @@
+*** test case ***;${username};${password};${message};${element};
+Invalid Login;" ";invalid;Invalid username or password;xpath=//div[@class='alert alert-danger'];
+Invalid Login;invalid;" ";Invalid username or password;xpath=//div[@class='alert alert-danger'];
+Invalid Login;invalid;invalid;Invalid username or password;xpath=//div[@class='alert alert-danger'];
+Valid Login;dummy;dummy;Access Denied;xpath=//div[@id='main-panel']/h1
